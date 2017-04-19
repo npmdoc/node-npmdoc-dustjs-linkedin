@@ -1,0 +1,3924 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://dustjs.com/"
+
+    >dustjs-linkedin (v2.7.5)</a>
+</h1>
+<h4>Asynchronous templates for the browser and server (LinkedIn fork)</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dustjs-linkedin">module dustjs-linkedin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.compile">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>compile
+            <span class="apidocSignatureSpan">(source, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.compileFn">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>compileFn
+            <span class="apidocSignatureSpan">(source, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.compileNode">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>compileNode
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.context">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>context
+            <span class="apidocSignatureSpan">(global, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.escapeHtml">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>escapeHtml
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.escapeJSON">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>escapeJSON
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.escapeJs">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>escapeJs
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.filter">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>filter
+            <span class="apidocSignatureSpan">(string, auto, filters, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.filterNode">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>filterNode
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.isArray">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.isContext">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isContext
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.isEmpty">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isEmpty
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.isEmptyObject">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isEmptyObject
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.isStreamable">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isStreamable
+            <span class="apidocSignatureSpan">(elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.isTemplateFn">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isTemplateFn
+            <span class="apidocSignatureSpan">(elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.isThenable">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isThenable
+            <span class="apidocSignatureSpan">(elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.loadSource">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>loadSource
+            <span class="apidocSignatureSpan">(source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.log">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>log
+            <span class="apidocSignatureSpan">(message, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.makeBase">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>makeBase
+            <span class="apidocSignatureSpan">(global, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nextTick">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>nextTick
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.parse">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>parse
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.register">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>register
+            <span class="apidocSignatureSpan">(name, tmpl)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.render">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>render
+            <span class="apidocSignatureSpan">(nameOrTemplate, context, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.renderSource">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>renderSource
+            <span class="apidocSignatureSpan">(source, context, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.stream">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.</span>stream
+            <span class="apidocSignatureSpan">(nameOrTemplate, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.</span>_aliases</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.</span>cache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.</span>compiler</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.</span>dust</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.</span>filters</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.</span>helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.</span>nodes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.</span>optimizers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.</span>parser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.</span>pragmas</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">dustjs-linkedin.</span>debugLevel</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">dustjs-linkedin.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dustjs-linkedin.compiler">module dustjs-linkedin.compiler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.compiler.compile">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.compiler.</span>compile
+            <span class="apidocSignatureSpan">(source, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.compiler.compileNode">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.compiler.</span>compileNode
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.compiler.filterNode">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.compiler.</span>filterNode
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.compiler.</span>nodes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.compiler.</span>optimizers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.compiler.</span>pragmas</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dustjs-linkedin.dust">module dustjs-linkedin.dust</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.compile">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>compile
+            <span class="apidocSignatureSpan">(source, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.compileFn">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>compileFn
+            <span class="apidocSignatureSpan">(source, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.compileNode">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>compileNode
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.context">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>context
+            <span class="apidocSignatureSpan">(global, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.escapeHtml">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>escapeHtml
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.escapeJSON">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>escapeJSON
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.escapeJs">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>escapeJs
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.filter">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>filter
+            <span class="apidocSignatureSpan">(string, auto, filters, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.filterNode">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>filterNode
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.isArray">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.isContext">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isContext
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.isEmpty">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isEmpty
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.isEmptyObject">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isEmptyObject
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.isStreamable">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isStreamable
+            <span class="apidocSignatureSpan">(elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.isTemplateFn">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isTemplateFn
+            <span class="apidocSignatureSpan">(elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.isThenable">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isThenable
+            <span class="apidocSignatureSpan">(elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.loadSource">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>loadSource
+            <span class="apidocSignatureSpan">(source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.log">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>log
+            <span class="apidocSignatureSpan">(message, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.makeBase">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>makeBase
+            <span class="apidocSignatureSpan">(global, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.nextTick">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>nextTick
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.parse">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>parse
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.register">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>register
+            <span class="apidocSignatureSpan">(name, tmpl)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.render">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>render
+            <span class="apidocSignatureSpan">(nameOrTemplate, context, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.renderSource">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>renderSource
+            <span class="apidocSignatureSpan">(source, context, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.dust.stream">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>stream
+            <span class="apidocSignatureSpan">(nameOrTemplate, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>_aliases</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>cache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>compiler</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>filters</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>nodes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>optimizers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>pragmas</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>debugLevel</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dustjs-linkedin.filters">module dustjs-linkedin.filters</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.filters.h">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.filters.</span>h
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.filters.j">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.filters.</span>j
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.filters.jp">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.filters.</span>jp
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.filters.js">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.filters.</span>js
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.filters.u">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.filters.</span>u
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.filters.uc">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.filters.</span>uc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dustjs-linkedin.nodes">module dustjs-linkedin.nodes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.bodies">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>bodies
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.body">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>body
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.buffer">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>buffer
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.context">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>context
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.filters">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>filters
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.format">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>format
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.key">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>key
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.literal">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>literal
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.param">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>param
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.params">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>params
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.partial">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>partial
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.path">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>path
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.raw">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>raw
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.nodes.reference">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>reference
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dustjs-linkedin.optimizers">module dustjs-linkedin.optimizers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.bodies">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>bodies
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.body">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>body
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.buffer">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>buffer
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.col">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>col
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.comment">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>comment
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.context">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>context
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.filters">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>filters
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.format">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>format
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.key">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>key
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.line">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>line
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.literal">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>literal
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.param">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>param
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.params">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>params
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.partial">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>partial
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.path">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>path
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.raw">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>raw
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.reference">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>reference
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.optimizers.special">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>special
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dustjs-linkedin.parser">module dustjs-linkedin.parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.parser.SyntaxError">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.parser.</span>SyntaxError
+            <span class="apidocSignatureSpan">(message, expected, found, offset, line, column)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.parser.parse">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.parser.</span>parse
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dustjs-linkedin.pragmas">module dustjs-linkedin.pragmas</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dustjs-linkedin.pragmas.esc">
+            function <span class="apidocSignatureSpan">dustjs-linkedin.pragmas.</span>esc
+            <span class="apidocSignatureSpan">(compiler, context, bodies)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dustjs-linkedin" id="apidoc.module.dustjs-linkedin">module dustjs-linkedin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.compile" id="apidoc.element.dustjs-linkedin.compile">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>compile
+        <span class="apidocSignatureSpan">(source, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (source, name) {
+  // the name parameter is optional.
+  // this can happen for templates that are rendered immediately (renderSource which calls compileFn) or
+  // for templates that are compiled as a callable (compileFn)
+  //
+  // for the common case (using compile and render) a name is required so that templates will be cached by name and rendered later
+, by name.
+
+  try {
+    var ast = filterAST(parse(source));
+    return compile(ast, name);
+  }
+  catch (err)
+  {
+    if (!err.line || !err.column) {
+      throw err;
+    }
+    throw new SyntaxError(err.message + &#x27; At line : &#x27; + err.line + &#x27;, column : &#x27; + err.column);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return chunk.setError(err);
+  }
+  // Prefer a template that is passed via callback over the cached version.
+  template = getTemplate(srcOrTemplate, false) || getTemplate(name, dust.config.cache);
+  if (!template) {
+    // It&#x27;s a template string, compile it and register under `name`
+    if(dust.compile) {
+      template = dust.loadSource(dust.<span class="apidocCodeKeywordSpan">compile</span>(srcOrTemplate, name));
+    } else {
+      return chunk.setError(new Error(&#x27;Dust compiler not available&#x27;));
+    }
+  }
+  template(chunk, Context.wrap(context, template.templateName)).end();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.compileFn" id="apidoc.element.dustjs-linkedin.compileFn">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>compileFn
+        <span class="apidocSignatureSpan">(source, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compileFn(source, name) {
+  var tmpl = dust.loadSource(dust.compile(source, name));
+  return loaderFor(tmpl);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.compileNode" id="apidoc.element.dustjs-linkedin.compileNode">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>compileNode
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compileNode = function (context, node) {
+  return compiler.nodes[node[0]](context, node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.context" id="apidoc.element.dustjs-linkedin.context">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>context
+        <span class="apidocSignatureSpan">(global, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">context = function (global, options) {
+  return new Context(undefined, global, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.escapeHtml" id="apidoc.element.dustjs-linkedin.escapeHtml">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>escapeHtml
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeHtml = function (s) {
+  if (typeof s === &#x22;string&#x22; || (s &#x26;&#x26; typeof s.toString === &#x22;function&#x22;)) {
+    if (typeof s !== &#x22;string&#x22;) {
+      s = s.toString();
+    }
+    if (!HCHARS.test(s)) {
+      return s;
+    }
+    return s.replace(AMP,&#x27;&#x26;amp;&#x27;).replace(LT,&#x27;&#x26;lt;&#x27;).replace(GT,&#x27;&#x26;gt;&#x27;).replace(QUOT,&#x27;&#x26;quot;&#x27;).replace(SQUOT, &#x27;&#x26;#39;&#x27;);
+  }
+  return s;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (auto) {
+    string = dust.filters[auto](string, context);
+  }
+  return string;
+};
+
+dust.filters = {
+  h: function(value) { return dust.<span class="apidocCodeKeywordSpan">escapeHtml</span>(value); },
+  j: function(value) { return dust.escapeJs(value); },
+  u: encodeURI,
+  uc: encodeURIComponent,
+  js: function(value) { return dust.escapeJSON(value); },
+  jp: function(value) {
+    if (!JSON) {dust.log(&#x27;JSON is undefined; could not parse `&#x27; + value + &#x27;`&#x27;, WARN);
+      return value;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.escapeJSON" id="apidoc.element.dustjs-linkedin.escapeJSON">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>escapeJSON
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeJSON = function (o) {
+  if (!JSON) {
+    dust.log(&#x27;JSON is undefined; could not escape `&#x27; + o + &#x27;`&#x27;, WARN);
+    return o;
+  } else {
+    return JSON.stringify(o)
+      .replace(LS, &#x27;\\u2028&#x27;)
+      .replace(PS, &#x27;\\u2029&#x27;)
+      .replace(LT, &#x27;\\u003c&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+dust.filters = {
+  h: function(value) { return dust.escapeHtml(value); },
+  j: function(value) { return dust.escapeJs(value); },
+  u: encodeURI,
+  uc: encodeURIComponent,
+  js: function(value) { return dust.<span class="apidocCodeKeywordSpan">escapeJSON</span>(value); },
+  jp: function(value) {
+    if (!JSON) {dust.log(&#x27;JSON is undefined; could not parse `&#x27; + value + &#x27;`&#x27;, WARN);
+      return value;
+    } else {
+      return JSON.parse(value);
+    }
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.escapeJs" id="apidoc.element.dustjs-linkedin.escapeJs">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>escapeJs
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeJs = function (s) {
+  if (typeof s === &#x27;string&#x27;) {
+    return s
+      .replace(BS, &#x27;\\\\&#x27;)
+      .replace(FS, &#x27;\\/&#x27;)
+      .replace(DQ, &#x27;\\&#x22;&#x27;)
+      .replace(SQ, &#x27;\\\&#x27;&#x27;)
+      .replace(CR, &#x27;\\r&#x27;)
+      .replace(LS, &#x27;\\u2028&#x27;)
+      .replace(PS, &#x27;\\u2029&#x27;)
+      .replace(NL, &#x27;\\n&#x27;)
+      .replace(LF, &#x27;\\f&#x27;)
+      .replace(TB, &#x27;\\t&#x27;);
+  }
+  return s;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    string = dust.filters[auto](string, context);
+  }
+  return string;
+};
+
+dust.filters = {
+  h: function(value) { return dust.escapeHtml(value); },
+  j: function(value) { return dust.<span class="apidocCodeKeywordSpan">escapeJs</span>(value); },
+  u: encodeURI,
+  uc: encodeURIComponent,
+  js: function(value) { return dust.escapeJSON(value); },
+  jp: function(value) {
+    if (!JSON) {dust.log(&#x27;JSON is undefined; could not parse `&#x27; + value + &#x27;`&#x27;, WARN);
+      return value;
+    } else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.filter" id="apidoc.element.dustjs-linkedin.filter">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>filter
+        <span class="apidocSignatureSpan">(string, auto, filters, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filter = function (string, auto, filters, context) {
+  var i, len, name, filter;
+  if (filters) {
+    for (i = 0, len = filters.length; i &#x3c; len; i++) {
+      name = filters[i];
+      if (!name.length) {
+        continue;
+      }
+      filter = dust.filters[name];
+      if (name === &#x27;s&#x27;) {
+        auto = null;
+      } else if (typeof filter === &#x27;function&#x27;) {
+        string = filter(string, context);
+      } else {
+        dust.log(&#x27;Invalid filter `&#x27; + name + &#x27;`&#x27;, WARN);
+      }
+    }
+  }
+  // by default always apply the h filter, unless asked to unescape with |s
+  if (auto) {
+    string = dust.filters[auto](string, context);
+  }
+  return string;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+  }
+  if (dust.isThenable(elem)) {
+    return this.await(elem, context, null, auto, filters);
+  } else if (dust.isStreamable(elem)) {
+    return this.stream(elem, context, null, auto, filters);
+  } else if (!dust.isEmpty(elem)) {
+    return this.write(dust.<span class="apidocCodeKeywordSpan">filter</span>(elem, auto, filters, context));
+  } else {
+    return this;
+  }
+};
+
+Chunk.prototype.section = function(elem, context, bodies, params) {
+  var body = bodies.block,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.filterNode" id="apidoc.element.dustjs-linkedin.filterNode">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>filterNode
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filterNode = function (context, node) {
+  return compiler.optimizers[node[0]](context, node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.isArray" id="apidoc.element.dustjs-linkedin.isArray">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isArray() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Dust has its own rules for what is &#x22;empty&#x22;-- which is not the same as falsy.
+ * Empty arrays, null, and undefined are empty
+ */
+dust.isEmpty = function(value) {
+  if (value === 0) {
+    return false;
+  }
+  if (dust.<span class="apidocCodeKeywordSpan">isArray</span>(value) &#x26;&#x26; !value.length) {
+    return true;
+  }
+  return !value;
+};
+
+dust.isEmptyObject = function(obj) {
+  var key;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.isContext" id="apidoc.element.dustjs-linkedin.isContext">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isContext
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isContext = function (obj) {
+  return typeof obj === &#x22;object&#x22; &#x26;&#x26; obj._isContext === true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function getWithResolvedData(ctx, cur, down) {
+  return function(data) {
+    return ctx.push(data)._get(cur, down);
+  };
+}
+
+Context.wrap = function(context, name) {
+  if (dust.<span class="apidocCodeKeywordSpan">isContext</span>(context)) {
+    return context;
+  }
+  return new Context(context, {}, {}, null, name);
+};
+
+/**
+ * Public API for getting a value from the context.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.isEmpty" id="apidoc.element.dustjs-linkedin.isEmpty">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isEmpty
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEmpty = function (value) {
+  if (value === 0) {
+    return false;
+  }
+  if (dust.isArray(value) &#x26;&#x26; !value.length) {
+    return true;
+  }
+  return !value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return this.reference(elem, context, auto, filters);
+    }
+  }
+  if (dust.isThenable(elem)) {
+    return this.await(elem, context, null, auto, filters);
+  } else if (dust.isStreamable(elem)) {
+    return this.stream(elem, context, null, auto, filters);
+  } else if (!dust.<span class="apidocCodeKeywordSpan">isEmpty</span>(elem)) {
+    return this.write(dust.filter(elem, auto, filters, context));
+  } else {
+    return this;
+  }
+};
+
+Chunk.prototype.section = function(elem, context, bodies, params) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.isEmptyObject" id="apidoc.element.dustjs-linkedin.isEmptyObject">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isEmptyObject
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEmptyObject = function (obj) {
+  var key;
+  if (obj === null) {
+    return false;
+  }
+  if (obj === undefined) {
+    return false;
+  }
+  if (obj.length &#x3e; 0) {
+    return false;
+  }
+  for (key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      return false;
+    }
+  }
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // Functions that return chunks are assumed to have handled the chunk manually.
+  // Make that chunk the current one and go to the next method in the chain.
+  if (elem instanceof Chunk) {
+    return elem;
+  }
+}
+
+if (dust.<span class="apidocCodeKeywordSpan">isEmptyObject</span>(bodies)) {
+  // No bodies to render, and we&#x27;ve already invoked any function that was available in
+  // hopes of returning a Chunk.
+  return chunk;
+}
+
+if (!dust.isEmptyObject(params)) {
+  context = context.push(params);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.isStreamable" id="apidoc.element.dustjs-linkedin.isStreamable">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isStreamable
+        <span class="apidocSignatureSpan">(elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isStreamable = function (elem) {
+  return elem &#x26;&#x26;
+         typeof elem.on === &#x27;function&#x27; &#x26;&#x26;
+         typeof elem.pipe === &#x27;function&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return elem;
+    } else {
+      return this.reference(elem, context, auto, filters);
+    }
+  }
+  if (dust.isThenable(elem)) {
+    return this.await(elem, context, null, auto, filters);
+  } else if (dust.<span class="apidocCodeKeywordSpan">isStreamable</span>(elem)) {
+    return this.stream(elem, context, null, auto, filters);
+  } else if (!dust.isEmpty(elem)) {
+    return this.write(dust.filter(elem, auto, filters, context));
+  } else {
+    return this;
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.isTemplateFn" id="apidoc.element.dustjs-linkedin.isTemplateFn">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isTemplateFn
+        <span class="apidocSignatureSpan">(elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isTemplateFn = function (elem) {
+  return typeof elem === &#x27;function&#x27; &#x26;&#x26;
+         elem.__dustBody;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if(!nameOrTemplate) {
+  return;
+}
+if(typeof nameOrTemplate === &#x27;function&#x27; &#x26;&#x26; nameOrTemplate.template) {
+  // Sugar away CommonJS module templates
+  return nameOrTemplate.template;
+}
+if(dust.<span class="apidocCodeKeywordSpan">isTemplateFn</span>(nameOrTemplate)) {
+  // Template functions passed directly
+  return nameOrTemplate;
+}
+if(loadFromCache !== false) {
+  // Try loading a template with this name from cache
+  return dust.cache[nameOrTemplate];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.isThenable" id="apidoc.element.dustjs-linkedin.isThenable">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>isThenable
+        <span class="apidocSignatureSpan">(elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isThenable = function (elem) {
+  return elem &#x26;&#x26;
+         typeof elem === &#x27;object&#x27; &#x26;&#x26;
+         typeof elem.then === &#x27;function&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  } else {
+    // context&#x27;s head is empty, value we are searching for is not defined
+    ctx = undefined;
+  }
+}
+
+while (ctx &#x26;&#x26; i &#x3c; len) {
+  if (dust.<span class="apidocCodeKeywordSpan">isThenable</span>(ctx)) {
+    // Bail early by returning a Thenable for the remainder of the search tree
+    return ctx.then(getWithResolvedData(this, cur, down.slice(i)));
+  }
+  ctxThis = ctx;
+  ctx = ctx[down[i]];
+  i++;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.loadSource" id="apidoc.element.dustjs-linkedin.loadSource">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>loadSource
+        <span class="apidocSignatureSpan">(source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadSource = function (source) {
+  return vm.runInContext(source, context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return chunk.setError(err);
+  }
+  // Prefer a template that is passed via callback over the cached version.
+  template = getTemplate(srcOrTemplate, false) || getTemplate(name, dust.config.cache);
+  if (!template) {
+    // It&#x27;s a template string, compile it and register under `name`
+    if(dust.compile) {
+      template = dust.<span class="apidocCodeKeywordSpan">loadSource</span>(dust.compile(srcOrTemplate, name));
+    } else {
+      return chunk.setError(new Error(&#x27;Dust compiler not available&#x27;));
+    }
+  }
+  template(chunk, Context.wrap(context, template.templateName)).end();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.log" id="apidoc.element.dustjs-linkedin.log">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>log
+        <span class="apidocSignatureSpan">(message, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (message, type) {
+  type = type || INFO;
+  if (loggingLevels[type] &#x3e;= loggingLevels[dust.debugLevel]) {
+    log(&#x27;[DUST:&#x27; + type + &#x27;]&#x27;, message);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    filter = dust.filters[name];
+    if (name === &#x27;s&#x27;) {
+      auto = null;
+    } else if (typeof filter === &#x27;function&#x27;) {
+      string = filter(string, context);
+    } else {
+      dust.<span class="apidocCodeKeywordSpan">log</span>(&#x27;Invalid filter `&#x27; + name + &#x27;`&#x27;, WARN);
+    }
+  }
+}
+// by default always apply the h filter, unless asked to unescape with |s
+if (auto) {
+  string = dust.filters[auto](string, context);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.makeBase" id="apidoc.element.dustjs-linkedin.makeBase">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>makeBase
+        <span class="apidocSignatureSpan">(global, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">makeBase = function (global, options) {
+  return new Context(undefined, global, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nextTick" id="apidoc.element.dustjs-linkedin.nextTick">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>nextTick
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nextTick(callback) {
+  if (typeof callback !== &#x27;function&#x27;)
+    throw new TypeError(&#x27;callback is not a function&#x27;);
+  // on the way out, don&#x27;t bother. it won&#x27;t get fired anyway.
+  if (process._exiting)
+    return;
+
+  var args;
+  if (arguments.length &#x3e; 1) {
+    args = new Array(arguments.length - 1);
+    for (var i = 1; i &#x3c; arguments.length; i++)
+      args[i - 1] = arguments[i];
+  }
+
+  nextTickQueue.push({
+    callback,
+    domain: process.domain || null,
+    args
+  });
+  tickInfo[kLength]++;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    chunk.setError(err);
+  }
+};
+
+dust.stream = function(nameOrTemplate, context) {
+  var stream = new Stream(),
+      chunk = stream.head;
+  dust.<span class="apidocCodeKeywordSpan">nextTick</span>(function() {
+    try {
+      load(nameOrTemplate, chunk, context).end();
+    } catch (err) {
+      chunk.setError(err);
+    }
+  });
+  return stream;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.parse" id="apidoc.element.dustjs-linkedin.parse">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>parse
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(input) {
+  var options = arguments.length &#x3e; 1 ? arguments[1] : {},
+
+      peg$FAILED = {},
+
+      peg$startRuleFunctions = { start: peg$parsestart },
+      peg$startRuleFunction  = peg$parsestart,
+
+      peg$c0 = [],
+      peg$c1 = function(p) {
+          var body = [&#x22;body&#x22;].concat(p);
+          return withPosition(body);
+        },
+      peg$c2 = { type: &#x22;other&#x22;, description: &#x22;section&#x22; },
+      peg$c3 = peg$FAILED,
+      peg$c4 = null,
+      peg$c5 = function(t, b, e, n) {
+          if( (!n) || (t[1].text !== n.text) ) {
+            error(&#x22;Expected end tag for &#x22;+t[1].text+&#x22; but it was not found.&#x22;);
+          }
+          return true;
+        },
+      peg$c6 = void 0,
+      peg$c7 = function(t, b, e, n) {
+          e.push([&#x22;param&#x22;, [&#x22;literal&#x22;, &#x22;block&#x22;], b]);
+          t.push(e, [&#x22;filters&#x22;]);
+          return withPosition(t)
+        },
+      peg$c8 = &#x22;/&#x22;,
+      peg$c9 = { type: &#x22;literal&#x22;, value: &#x22;/&#x22;, description: &#x22;\&#x22;/\&#x22;&#x22; },
+      peg$c10 = function(t) {
+          t.push([&#x22;bodies&#x22;], [&#x22;filters&#x22;]);
+          return withPosition(t)
+        },
+      peg$c11 = /^[#?\^&#x3c;+@%]/,
+      peg$c12 = { type: &#x22;class&#x22;, value: &#x22;[#?\\^&#x3c;+@%]&#x22;, description: &#x22;[#?\\^&#x3c;+@%]&#x22; },
+      peg$c13 = function(t, n, c, p) { return [t, n, c, p] },
+      peg$c14 = { type: &#x22;other&#x22;, description: &#x22;end tag&#x22; },
+      peg$c15 = function(n) { return n },
+      peg$c16 = &#x22;:&#x22;,
+      peg$c17 = { type: &#x22;literal&#x22;, value: &#x22;:&#x22;, description: &#x22;\&#x22;:\&#x22;&#x22; },
+      peg$c18 = function(n) {return n},
+      peg$c19 = function(n) { return n ? [&#x22;context&#x22;, n] : [&#x22;context&#x22;] },
+      peg$c20 = { type: &#x22;other&#x22;, description: &#x22;params&#x22; },
+      peg$c21 = &#x22;=&#x22;,
+      peg$c22 = { type: &#x22;literal&#x22;, value: &#x22;=&#x22;, description: &#x22;\&#x22;=\&#x22;&#x22; },
+      peg$c23 = function(k, v) {return [&#x22;param&#x22;, [&#x22;literal&#x22;, k], v]},
+      peg$c24 = function(p) { return [&#x22;params&#x22;].concat(p) },
+      peg$c25 = { type: &#x22;other&#x22;, description: &#x22;bodies&#x22; },
+      peg$c26 = function(p) { return [&#x22;bodies&#x22;].concat(p) },
+      peg$c27 = { type: &#x22;other&#x22;, description: &#x22;reference&#x22; },
+      peg$c28 = function(n, f) { return withPosition([&#x22;reference&#x22;, n, f]) },
+      peg$c29 = { type: &#x22;other&#x22;, description: &#x22;partial&#x22; },
+      peg$c30 = &#x22;&#x3e;&#x22;,
+      peg$c31 = { type: &#x22;literal&#x22;, value: &#x22;&#x3e;&#x22;, description: &#x22;\&#x22;&#x3e;\&#x22;&#x22; },
+      peg$c32 = &#x22;+&#x22;,
+      peg$c33 = { type: &#x22;literal&#x22;, value: &#x22;+&#x22;, description: &#x22;\&#x22;+\&#x22;&#x22; },
+      peg$c34 = function(k) {return [&#x22;literal&#x22;, k]},
+      peg$c35 = function(s, n, c, p) {
+          var key = (s === &#x22;&#x3e;&#x22;) ? &#x22;partial&#x22; : s;
+          return withPosition([key, n, c, p])
+        },
+      peg$c36 = { type: &#x22;other&#x22;, description: &#x22;filters&#x22; },
+      peg$c37 = &#x22;|&#x22;,
+      peg$c38 = { type: &#x22;literal&#x22;, value: &#x22;|&#x22;, description: &#x22;\&#x22;|\&#x22;&#x22; },
+      peg$c39 = function(f) { return [&#x22;filters&#x22;].concat(f) },
+      peg$c40 = { type: &#x22;other&#x22;, description: &#x22;special&#x22; },
+      peg$c41 = &#x22;~&#x22;,
+      peg$c42 = { type: &#x22;literal&#x22;, value: &#x22;~&#x22;, description: &#x22;\&#x22;~\&#x22;&#x22; },
+      peg$c43 = function(k) { return withPosition([&#x22;special&#x22;, k]) },
+      peg$c44 = { type: &#x22;other&#x22;, description: &#x22;identifier&#x22; },
+      peg$c45 = function(p) {
+          var arr = [&#x22;path&#x22;].concat(p);
+          arr.text = p[1].join(&#x27;.&#x27;).replace(/,line,\d+,col,\d+/g,&#x27;&#x27;);
+          return arr;
+        },
+      peg$c46 = function(k) {
+          var arr = [&#x22;key&#x22;, k];
+          arr.text = k;
+          return arr;
+        },
+      peg$c47 = { type: &#x22;other&#x22;, description: &#x22;number&#x22; },
+      peg$c48 = function(n) { return [&#x27;literal&#x27;, n]; },
+      peg$c49 = { type: &#x22;other&#x22;, description: &#x22;float&#x22; },
+      peg$c50 = &#x22;.&#x22;,
+      peg$c51 = { type: &#x22;literal&#x22;, value: &#x22;.&#x22;, description: &#x22;\&#x22;.\&#x22;&#x22; },
+      peg$c52 = function(l, r) { return parseFloat(l + &#x22;.&#x22; + r); },
+      peg$c53 = { type: &#x22;other&#x22;, description: &#x22;unsigned_integer&#x22; },
+      peg$c54 = /^[0-9]/,
+      peg$c55 = { type: &#x22;class&#x22;, value: &#x22;[0-9]&#x22;, description: &#x22;[0-9]&#x22; },
+      peg$c56 = function(digits) { return makeInteger(digits); },
+      peg$c57 = { type: &#x22;other&#x22;, description: &#x22;signed_integer&#x22; },
+      peg$c58 = &#x22;-&#x22;,
+      peg$c59 = { type: &#x22;literal&#x22;, value: &#x22;-&#x22;, description: &#x22;\&#x22;-\&#x22;&#x22; },
+      peg$c60 = function(sign, n) { return n * -1; }, ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  u: encodeURI,
+  uc: encodeURIComponent,
+  js: function(value) { return dust.escapeJSON(value); },
+  jp: function(value) {
+    if (!JSON) {dust.log(&#x27;JSON is undefined; could not parse `&#x27; + value + &#x27;`&#x27;, WARN);
+      return value;
+    } else {
+      return JSON.<span class="apidocCodeKeywordSpan">parse</span>(value);
+    }
+  }
+};
+
+function Context(stack, global, options, blocks, templateName) {
+  if(stack !== undefined &#x26;&#x26; !(stack instanceof Stack)) {
+    stack = new Stack(stack);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.register" id="apidoc.element.dustjs-linkedin.register">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>register
+        <span class="apidocSignatureSpan">(name, tmpl)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">register = function (name, tmpl) {
+  if (!name) {
+    return;
+  }
+  tmpl.templateName = name;
+  if (dust.config.cache !== false) {
+    dust.cache[name] = tmpl;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.render" id="apidoc.element.dustjs-linkedin.render">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>render
+        <span class="apidocSignatureSpan">(nameOrTemplate, context, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (nameOrTemplate, context, callback) {
+  var chunk = new Stub(callback).head;
+  try {
+    load(nameOrTemplate, chunk, context).end();
+  } catch (err) {
+    chunk.setError(err);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Context.prototype.resolve = function(body) {
+  var chunk;
+
+  if(typeof body !== &#x27;function&#x27;) {
+    return body;
+  }
+  chunk = new Chunk().<span class="apidocCodeKeywordSpan">render</span>(body, this);
+  if(chunk instanceof Chunk) {
+    return chunk.data.join(&#x27;&#x27;); // ie7 perf
+  }
+  return chunk;
+};
+
+Context.prototype.getTemplateName = function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.renderSource" id="apidoc.element.dustjs-linkedin.renderSource">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>renderSource
+        <span class="apidocSignatureSpan">(source, context, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function renderSource(source, context, callback) {
+  var tmpl = dust.loadSource(dust.compile(source));
+  return loaderFor(tmpl)(context, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.stream" id="apidoc.element.dustjs-linkedin.stream">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.</span>stream
+        <span class="apidocSignatureSpan">(nameOrTemplate, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stream = function (nameOrTemplate, context) {
+  var stream = new Stream(),
+      chunk = stream.head;
+  dust.nextTick(function() {
+    try {
+      load(nameOrTemplate, chunk, context).end();
+    } catch (err) {
+      chunk.setError(err);
+    }
+  });
+  return stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    } else {
+      return this.reference(elem, context, auto, filters);
+    }
+  }
+  if (dust.isThenable(elem)) {
+    return this.await(elem, context, null, auto, filters);
+  } else if (dust.isStreamable(elem)) {
+    return this.<span class="apidocCodeKeywordSpan">stream</span>(elem, context, null, auto, filters);
+  } else if (!dust.isEmpty(elem)) {
+    return this.write(dust.filter(elem, auto, filters, context));
+  } else {
+    return this;
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dustjs-linkedin.compiler" id="apidoc.module.dustjs-linkedin.compiler">module dustjs-linkedin.compiler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.compiler.compile" id="apidoc.element.dustjs-linkedin.compiler.compile">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.compiler.</span>compile
+        <span class="apidocSignatureSpan">(source, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (source, name) {
+  // the name parameter is optional.
+  // this can happen for templates that are rendered immediately (renderSource which calls compileFn) or
+  // for templates that are compiled as a callable (compileFn)
+  //
+  // for the common case (using compile and render) a name is required so that templates will be cached by name and rendered later
+, by name.
+
+  try {
+    var ast = filterAST(parse(source));
+    return compile(ast, name);
+  }
+  catch (err)
+  {
+    if (!err.line || !err.column) {
+      throw err;
+    }
+    throw new SyntaxError(err.message + &#x27; At line : &#x27; + err.line + &#x27;, column : &#x27; + err.column);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return chunk.setError(err);
+  }
+  // Prefer a template that is passed via callback over the cached version.
+  template = getTemplate(srcOrTemplate, false) || getTemplate(name, dust.config.cache);
+  if (!template) {
+    // It&#x27;s a template string, compile it and register under `name`
+    if(dust.compile) {
+      template = dust.loadSource(dust.<span class="apidocCodeKeywordSpan">compile</span>(srcOrTemplate, name));
+    } else {
+      return chunk.setError(new Error(&#x27;Dust compiler not available&#x27;));
+    }
+  }
+  template(chunk, Context.wrap(context, template.templateName)).end();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.compiler.compileNode" id="apidoc.element.dustjs-linkedin.compiler.compileNode">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.compiler.</span>compileNode
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compileNode = function (context, node) {
+  return compiler.nodes[node[0]](context, node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.compiler.filterNode" id="apidoc.element.dustjs-linkedin.compiler.filterNode">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.compiler.</span>filterNode
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filterNode = function (context, node) {
+  return compiler.optimizers[node[0]](context, node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dustjs-linkedin.dust" id="apidoc.module.dustjs-linkedin.dust">module dustjs-linkedin.dust</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.compile" id="apidoc.element.dustjs-linkedin.dust.compile">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>compile
+        <span class="apidocSignatureSpan">(source, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (source, name) {
+  // the name parameter is optional.
+  // this can happen for templates that are rendered immediately (renderSource which calls compileFn) or
+  // for templates that are compiled as a callable (compileFn)
+  //
+  // for the common case (using compile and render) a name is required so that templates will be cached by name and rendered later
+, by name.
+
+  try {
+    var ast = filterAST(parse(source));
+    return compile(ast, name);
+  }
+  catch (err)
+  {
+    if (!err.line || !err.column) {
+      throw err;
+    }
+    throw new SyntaxError(err.message + &#x27; At line : &#x27; + err.line + &#x27;, column : &#x27; + err.column);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return chunk.setError(err);
+  }
+  // Prefer a template that is passed via callback over the cached version.
+  template = getTemplate(srcOrTemplate, false) || getTemplate(name, dust.config.cache);
+  if (!template) {
+    // It&#x27;s a template string, compile it and register under `name`
+    if(dust.compile) {
+      template = dust.loadSource(dust.<span class="apidocCodeKeywordSpan">compile</span>(srcOrTemplate, name));
+    } else {
+      return chunk.setError(new Error(&#x27;Dust compiler not available&#x27;));
+    }
+  }
+  template(chunk, Context.wrap(context, template.templateName)).end();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.compileFn" id="apidoc.element.dustjs-linkedin.dust.compileFn">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>compileFn
+        <span class="apidocSignatureSpan">(source, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compileFn(source, name) {
+  var tmpl = dust.loadSource(dust.compile(source, name));
+  return loaderFor(tmpl);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.compileNode" id="apidoc.element.dustjs-linkedin.dust.compileNode">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>compileNode
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compileNode = function (context, node) {
+  return compiler.nodes[node[0]](context, node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.context" id="apidoc.element.dustjs-linkedin.dust.context">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>context
+        <span class="apidocSignatureSpan">(global, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">context = function (global, options) {
+  return new Context(undefined, global, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.escapeHtml" id="apidoc.element.dustjs-linkedin.dust.escapeHtml">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>escapeHtml
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeHtml = function (s) {
+  if (typeof s === &#x22;string&#x22; || (s &#x26;&#x26; typeof s.toString === &#x22;function&#x22;)) {
+    if (typeof s !== &#x22;string&#x22;) {
+      s = s.toString();
+    }
+    if (!HCHARS.test(s)) {
+      return s;
+    }
+    return s.replace(AMP,&#x27;&#x26;amp;&#x27;).replace(LT,&#x27;&#x26;lt;&#x27;).replace(GT,&#x27;&#x26;gt;&#x27;).replace(QUOT,&#x27;&#x26;quot;&#x27;).replace(SQUOT, &#x27;&#x26;#39;&#x27;);
+  }
+  return s;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (auto) {
+    string = dust.filters[auto](string, context);
+  }
+  return string;
+};
+
+dust.filters = {
+  h: function(value) { return dust.<span class="apidocCodeKeywordSpan">escapeHtml</span>(value); },
+  j: function(value) { return dust.escapeJs(value); },
+  u: encodeURI,
+  uc: encodeURIComponent,
+  js: function(value) { return dust.escapeJSON(value); },
+  jp: function(value) {
+    if (!JSON) {dust.log(&#x27;JSON is undefined; could not parse `&#x27; + value + &#x27;`&#x27;, WARN);
+      return value;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.escapeJSON" id="apidoc.element.dustjs-linkedin.dust.escapeJSON">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>escapeJSON
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeJSON = function (o) {
+  if (!JSON) {
+    dust.log(&#x27;JSON is undefined; could not escape `&#x27; + o + &#x27;`&#x27;, WARN);
+    return o;
+  } else {
+    return JSON.stringify(o)
+      .replace(LS, &#x27;\\u2028&#x27;)
+      .replace(PS, &#x27;\\u2029&#x27;)
+      .replace(LT, &#x27;\\u003c&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+dust.filters = {
+  h: function(value) { return dust.escapeHtml(value); },
+  j: function(value) { return dust.escapeJs(value); },
+  u: encodeURI,
+  uc: encodeURIComponent,
+  js: function(value) { return dust.<span class="apidocCodeKeywordSpan">escapeJSON</span>(value); },
+  jp: function(value) {
+    if (!JSON) {dust.log(&#x27;JSON is undefined; could not parse `&#x27; + value + &#x27;`&#x27;, WARN);
+      return value;
+    } else {
+      return JSON.parse(value);
+    }
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.escapeJs" id="apidoc.element.dustjs-linkedin.dust.escapeJs">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>escapeJs
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeJs = function (s) {
+  if (typeof s === &#x27;string&#x27;) {
+    return s
+      .replace(BS, &#x27;\\\\&#x27;)
+      .replace(FS, &#x27;\\/&#x27;)
+      .replace(DQ, &#x27;\\&#x22;&#x27;)
+      .replace(SQ, &#x27;\\\&#x27;&#x27;)
+      .replace(CR, &#x27;\\r&#x27;)
+      .replace(LS, &#x27;\\u2028&#x27;)
+      .replace(PS, &#x27;\\u2029&#x27;)
+      .replace(NL, &#x27;\\n&#x27;)
+      .replace(LF, &#x27;\\f&#x27;)
+      .replace(TB, &#x27;\\t&#x27;);
+  }
+  return s;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    string = dust.filters[auto](string, context);
+  }
+  return string;
+};
+
+dust.filters = {
+  h: function(value) { return dust.escapeHtml(value); },
+  j: function(value) { return dust.<span class="apidocCodeKeywordSpan">escapeJs</span>(value); },
+  u: encodeURI,
+  uc: encodeURIComponent,
+  js: function(value) { return dust.escapeJSON(value); },
+  jp: function(value) {
+    if (!JSON) {dust.log(&#x27;JSON is undefined; could not parse `&#x27; + value + &#x27;`&#x27;, WARN);
+      return value;
+    } else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.filter" id="apidoc.element.dustjs-linkedin.dust.filter">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>filter
+        <span class="apidocSignatureSpan">(string, auto, filters, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filter = function (string, auto, filters, context) {
+  var i, len, name, filter;
+  if (filters) {
+    for (i = 0, len = filters.length; i &#x3c; len; i++) {
+      name = filters[i];
+      if (!name.length) {
+        continue;
+      }
+      filter = dust.filters[name];
+      if (name === &#x27;s&#x27;) {
+        auto = null;
+      } else if (typeof filter === &#x27;function&#x27;) {
+        string = filter(string, context);
+      } else {
+        dust.log(&#x27;Invalid filter `&#x27; + name + &#x27;`&#x27;, WARN);
+      }
+    }
+  }
+  // by default always apply the h filter, unless asked to unescape with |s
+  if (auto) {
+    string = dust.filters[auto](string, context);
+  }
+  return string;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+  }
+  if (dust.isThenable(elem)) {
+    return this.await(elem, context, null, auto, filters);
+  } else if (dust.isStreamable(elem)) {
+    return this.stream(elem, context, null, auto, filters);
+  } else if (!dust.isEmpty(elem)) {
+    return this.write(dust.<span class="apidocCodeKeywordSpan">filter</span>(elem, auto, filters, context));
+  } else {
+    return this;
+  }
+};
+
+Chunk.prototype.section = function(elem, context, bodies, params) {
+  var body = bodies.block,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.filterNode" id="apidoc.element.dustjs-linkedin.dust.filterNode">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>filterNode
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filterNode = function (context, node) {
+  return compiler.optimizers[node[0]](context, node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.isArray" id="apidoc.element.dustjs-linkedin.dust.isArray">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isArray() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Dust has its own rules for what is &#x22;empty&#x22;-- which is not the same as falsy.
+ * Empty arrays, null, and undefined are empty
+ */
+dust.isEmpty = function(value) {
+  if (value === 0) {
+    return false;
+  }
+  if (dust.<span class="apidocCodeKeywordSpan">isArray</span>(value) &#x26;&#x26; !value.length) {
+    return true;
+  }
+  return !value;
+};
+
+dust.isEmptyObject = function(obj) {
+  var key;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.isContext" id="apidoc.element.dustjs-linkedin.dust.isContext">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isContext
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isContext = function (obj) {
+  return typeof obj === &#x22;object&#x22; &#x26;&#x26; obj._isContext === true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function getWithResolvedData(ctx, cur, down) {
+  return function(data) {
+    return ctx.push(data)._get(cur, down);
+  };
+}
+
+Context.wrap = function(context, name) {
+  if (dust.<span class="apidocCodeKeywordSpan">isContext</span>(context)) {
+    return context;
+  }
+  return new Context(context, {}, {}, null, name);
+};
+
+/**
+ * Public API for getting a value from the context.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.isEmpty" id="apidoc.element.dustjs-linkedin.dust.isEmpty">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isEmpty
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEmpty = function (value) {
+  if (value === 0) {
+    return false;
+  }
+  if (dust.isArray(value) &#x26;&#x26; !value.length) {
+    return true;
+  }
+  return !value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return this.reference(elem, context, auto, filters);
+    }
+  }
+  if (dust.isThenable(elem)) {
+    return this.await(elem, context, null, auto, filters);
+  } else if (dust.isStreamable(elem)) {
+    return this.stream(elem, context, null, auto, filters);
+  } else if (!dust.<span class="apidocCodeKeywordSpan">isEmpty</span>(elem)) {
+    return this.write(dust.filter(elem, auto, filters, context));
+  } else {
+    return this;
+  }
+};
+
+Chunk.prototype.section = function(elem, context, bodies, params) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.isEmptyObject" id="apidoc.element.dustjs-linkedin.dust.isEmptyObject">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isEmptyObject
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEmptyObject = function (obj) {
+  var key;
+  if (obj === null) {
+    return false;
+  }
+  if (obj === undefined) {
+    return false;
+  }
+  if (obj.length &#x3e; 0) {
+    return false;
+  }
+  for (key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      return false;
+    }
+  }
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // Functions that return chunks are assumed to have handled the chunk manually.
+  // Make that chunk the current one and go to the next method in the chain.
+  if (elem instanceof Chunk) {
+    return elem;
+  }
+}
+
+if (dust.<span class="apidocCodeKeywordSpan">isEmptyObject</span>(bodies)) {
+  // No bodies to render, and we&#x27;ve already invoked any function that was available in
+  // hopes of returning a Chunk.
+  return chunk;
+}
+
+if (!dust.isEmptyObject(params)) {
+  context = context.push(params);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.isStreamable" id="apidoc.element.dustjs-linkedin.dust.isStreamable">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isStreamable
+        <span class="apidocSignatureSpan">(elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isStreamable = function (elem) {
+  return elem &#x26;&#x26;
+         typeof elem.on === &#x27;function&#x27; &#x26;&#x26;
+         typeof elem.pipe === &#x27;function&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return elem;
+    } else {
+      return this.reference(elem, context, auto, filters);
+    }
+  }
+  if (dust.isThenable(elem)) {
+    return this.await(elem, context, null, auto, filters);
+  } else if (dust.<span class="apidocCodeKeywordSpan">isStreamable</span>(elem)) {
+    return this.stream(elem, context, null, auto, filters);
+  } else if (!dust.isEmpty(elem)) {
+    return this.write(dust.filter(elem, auto, filters, context));
+  } else {
+    return this;
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.isTemplateFn" id="apidoc.element.dustjs-linkedin.dust.isTemplateFn">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isTemplateFn
+        <span class="apidocSignatureSpan">(elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isTemplateFn = function (elem) {
+  return typeof elem === &#x27;function&#x27; &#x26;&#x26;
+         elem.__dustBody;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if(!nameOrTemplate) {
+  return;
+}
+if(typeof nameOrTemplate === &#x27;function&#x27; &#x26;&#x26; nameOrTemplate.template) {
+  // Sugar away CommonJS module templates
+  return nameOrTemplate.template;
+}
+if(dust.<span class="apidocCodeKeywordSpan">isTemplateFn</span>(nameOrTemplate)) {
+  // Template functions passed directly
+  return nameOrTemplate;
+}
+if(loadFromCache !== false) {
+  // Try loading a template with this name from cache
+  return dust.cache[nameOrTemplate];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.isThenable" id="apidoc.element.dustjs-linkedin.dust.isThenable">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>isThenable
+        <span class="apidocSignatureSpan">(elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isThenable = function (elem) {
+  return elem &#x26;&#x26;
+         typeof elem === &#x27;object&#x27; &#x26;&#x26;
+         typeof elem.then === &#x27;function&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  } else {
+    // context&#x27;s head is empty, value we are searching for is not defined
+    ctx = undefined;
+  }
+}
+
+while (ctx &#x26;&#x26; i &#x3c; len) {
+  if (dust.<span class="apidocCodeKeywordSpan">isThenable</span>(ctx)) {
+    // Bail early by returning a Thenable for the remainder of the search tree
+    return ctx.then(getWithResolvedData(this, cur, down.slice(i)));
+  }
+  ctxThis = ctx;
+  ctx = ctx[down[i]];
+  i++;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.loadSource" id="apidoc.element.dustjs-linkedin.dust.loadSource">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>loadSource
+        <span class="apidocSignatureSpan">(source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadSource = function (source) {
+  return vm.runInContext(source, context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return chunk.setError(err);
+  }
+  // Prefer a template that is passed via callback over the cached version.
+  template = getTemplate(srcOrTemplate, false) || getTemplate(name, dust.config.cache);
+  if (!template) {
+    // It&#x27;s a template string, compile it and register under `name`
+    if(dust.compile) {
+      template = dust.<span class="apidocCodeKeywordSpan">loadSource</span>(dust.compile(srcOrTemplate, name));
+    } else {
+      return chunk.setError(new Error(&#x27;Dust compiler not available&#x27;));
+    }
+  }
+  template(chunk, Context.wrap(context, template.templateName)).end();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.log" id="apidoc.element.dustjs-linkedin.dust.log">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>log
+        <span class="apidocSignatureSpan">(message, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (message, type) {
+  type = type || INFO;
+  if (loggingLevels[type] &#x3e;= loggingLevels[dust.debugLevel]) {
+    log(&#x27;[DUST:&#x27; + type + &#x27;]&#x27;, message);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    filter = dust.filters[name];
+    if (name === &#x27;s&#x27;) {
+      auto = null;
+    } else if (typeof filter === &#x27;function&#x27;) {
+      string = filter(string, context);
+    } else {
+      dust.<span class="apidocCodeKeywordSpan">log</span>(&#x27;Invalid filter `&#x27; + name + &#x27;`&#x27;, WARN);
+    }
+  }
+}
+// by default always apply the h filter, unless asked to unescape with |s
+if (auto) {
+  string = dust.filters[auto](string, context);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.makeBase" id="apidoc.element.dustjs-linkedin.dust.makeBase">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>makeBase
+        <span class="apidocSignatureSpan">(global, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">makeBase = function (global, options) {
+  return new Context(undefined, global, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.nextTick" id="apidoc.element.dustjs-linkedin.dust.nextTick">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>nextTick
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nextTick(callback) {
+  if (typeof callback !== &#x27;function&#x27;)
+    throw new TypeError(&#x27;callback is not a function&#x27;);
+  // on the way out, don&#x27;t bother. it won&#x27;t get fired anyway.
+  if (process._exiting)
+    return;
+
+  var args;
+  if (arguments.length &#x3e; 1) {
+    args = new Array(arguments.length - 1);
+    for (var i = 1; i &#x3c; arguments.length; i++)
+      args[i - 1] = arguments[i];
+  }
+
+  nextTickQueue.push({
+    callback,
+    domain: process.domain || null,
+    args
+  });
+  tickInfo[kLength]++;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    chunk.setError(err);
+  }
+};
+
+dust.stream = function(nameOrTemplate, context) {
+  var stream = new Stream(),
+      chunk = stream.head;
+  dust.<span class="apidocCodeKeywordSpan">nextTick</span>(function() {
+    try {
+      load(nameOrTemplate, chunk, context).end();
+    } catch (err) {
+      chunk.setError(err);
+    }
+  });
+  return stream;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.parse" id="apidoc.element.dustjs-linkedin.dust.parse">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>parse
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(input) {
+  var options = arguments.length &#x3e; 1 ? arguments[1] : {},
+
+      peg$FAILED = {},
+
+      peg$startRuleFunctions = { start: peg$parsestart },
+      peg$startRuleFunction  = peg$parsestart,
+
+      peg$c0 = [],
+      peg$c1 = function(p) {
+          var body = [&#x22;body&#x22;].concat(p);
+          return withPosition(body);
+        },
+      peg$c2 = { type: &#x22;other&#x22;, description: &#x22;section&#x22; },
+      peg$c3 = peg$FAILED,
+      peg$c4 = null,
+      peg$c5 = function(t, b, e, n) {
+          if( (!n) || (t[1].text !== n.text) ) {
+            error(&#x22;Expected end tag for &#x22;+t[1].text+&#x22; but it was not found.&#x22;);
+          }
+          return true;
+        },
+      peg$c6 = void 0,
+      peg$c7 = function(t, b, e, n) {
+          e.push([&#x22;param&#x22;, [&#x22;literal&#x22;, &#x22;block&#x22;], b]);
+          t.push(e, [&#x22;filters&#x22;]);
+          return withPosition(t)
+        },
+      peg$c8 = &#x22;/&#x22;,
+      peg$c9 = { type: &#x22;literal&#x22;, value: &#x22;/&#x22;, description: &#x22;\&#x22;/\&#x22;&#x22; },
+      peg$c10 = function(t) {
+          t.push([&#x22;bodies&#x22;], [&#x22;filters&#x22;]);
+          return withPosition(t)
+        },
+      peg$c11 = /^[#?\^&#x3c;+@%]/,
+      peg$c12 = { type: &#x22;class&#x22;, value: &#x22;[#?\\^&#x3c;+@%]&#x22;, description: &#x22;[#?\\^&#x3c;+@%]&#x22; },
+      peg$c13 = function(t, n, c, p) { return [t, n, c, p] },
+      peg$c14 = { type: &#x22;other&#x22;, description: &#x22;end tag&#x22; },
+      peg$c15 = function(n) { return n },
+      peg$c16 = &#x22;:&#x22;,
+      peg$c17 = { type: &#x22;literal&#x22;, value: &#x22;:&#x22;, description: &#x22;\&#x22;:\&#x22;&#x22; },
+      peg$c18 = function(n) {return n},
+      peg$c19 = function(n) { return n ? [&#x22;context&#x22;, n] : [&#x22;context&#x22;] },
+      peg$c20 = { type: &#x22;other&#x22;, description: &#x22;params&#x22; },
+      peg$c21 = &#x22;=&#x22;,
+      peg$c22 = { type: &#x22;literal&#x22;, value: &#x22;=&#x22;, description: &#x22;\&#x22;=\&#x22;&#x22; },
+      peg$c23 = function(k, v) {return [&#x22;param&#x22;, [&#x22;literal&#x22;, k], v]},
+      peg$c24 = function(p) { return [&#x22;params&#x22;].concat(p) },
+      peg$c25 = { type: &#x22;other&#x22;, description: &#x22;bodies&#x22; },
+      peg$c26 = function(p) { return [&#x22;bodies&#x22;].concat(p) },
+      peg$c27 = { type: &#x22;other&#x22;, description: &#x22;reference&#x22; },
+      peg$c28 = function(n, f) { return withPosition([&#x22;reference&#x22;, n, f]) },
+      peg$c29 = { type: &#x22;other&#x22;, description: &#x22;partial&#x22; },
+      peg$c30 = &#x22;&#x3e;&#x22;,
+      peg$c31 = { type: &#x22;literal&#x22;, value: &#x22;&#x3e;&#x22;, description: &#x22;\&#x22;&#x3e;\&#x22;&#x22; },
+      peg$c32 = &#x22;+&#x22;,
+      peg$c33 = { type: &#x22;literal&#x22;, value: &#x22;+&#x22;, description: &#x22;\&#x22;+\&#x22;&#x22; },
+      peg$c34 = function(k) {return [&#x22;literal&#x22;, k]},
+      peg$c35 = function(s, n, c, p) {
+          var key = (s === &#x22;&#x3e;&#x22;) ? &#x22;partial&#x22; : s;
+          return withPosition([key, n, c, p])
+        },
+      peg$c36 = { type: &#x22;other&#x22;, description: &#x22;filters&#x22; },
+      peg$c37 = &#x22;|&#x22;,
+      peg$c38 = { type: &#x22;literal&#x22;, value: &#x22;|&#x22;, description: &#x22;\&#x22;|\&#x22;&#x22; },
+      peg$c39 = function(f) { return [&#x22;filters&#x22;].concat(f) },
+      peg$c40 = { type: &#x22;other&#x22;, description: &#x22;special&#x22; },
+      peg$c41 = &#x22;~&#x22;,
+      peg$c42 = { type: &#x22;literal&#x22;, value: &#x22;~&#x22;, description: &#x22;\&#x22;~\&#x22;&#x22; },
+      peg$c43 = function(k) { return withPosition([&#x22;special&#x22;, k]) },
+      peg$c44 = { type: &#x22;other&#x22;, description: &#x22;identifier&#x22; },
+      peg$c45 = function(p) {
+          var arr = [&#x22;path&#x22;].concat(p);
+          arr.text = p[1].join(&#x27;.&#x27;).replace(/,line,\d+,col,\d+/g,&#x27;&#x27;);
+          return arr;
+        },
+      peg$c46 = function(k) {
+          var arr = [&#x22;key&#x22;, k];
+          arr.text = k;
+          return arr;
+        },
+      peg$c47 = { type: &#x22;other&#x22;, description: &#x22;number&#x22; },
+      peg$c48 = function(n) { return [&#x27;literal&#x27;, n]; },
+      peg$c49 = { type: &#x22;other&#x22;, description: &#x22;float&#x22; },
+      peg$c50 = &#x22;.&#x22;,
+      peg$c51 = { type: &#x22;literal&#x22;, value: &#x22;.&#x22;, description: &#x22;\&#x22;.\&#x22;&#x22; },
+      peg$c52 = function(l, r) { return parseFloat(l + &#x22;.&#x22; + r); },
+      peg$c53 = { type: &#x22;other&#x22;, description: &#x22;unsigned_integer&#x22; },
+      peg$c54 = /^[0-9]/,
+      peg$c55 = { type: &#x22;class&#x22;, value: &#x22;[0-9]&#x22;, description: &#x22;[0-9]&#x22; },
+      peg$c56 = function(digits) { return makeInteger(digits); },
+      peg$c57 = { type: &#x22;other&#x22;, description: &#x22;signed_integer&#x22; },
+      peg$c58 = &#x22;-&#x22;,
+      peg$c59 = { type: &#x22;literal&#x22;, value: &#x22;-&#x22;, description: &#x22;\&#x22;-\&#x22;&#x22; },
+      peg$c60 = function(sign, n) { return n * -1; }, ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  u: encodeURI,
+  uc: encodeURIComponent,
+  js: function(value) { return dust.escapeJSON(value); },
+  jp: function(value) {
+    if (!JSON) {dust.log(&#x27;JSON is undefined; could not parse `&#x27; + value + &#x27;`&#x27;, WARN);
+      return value;
+    } else {
+      return JSON.<span class="apidocCodeKeywordSpan">parse</span>(value);
+    }
+  }
+};
+
+function Context(stack, global, options, blocks, templateName) {
+  if(stack !== undefined &#x26;&#x26; !(stack instanceof Stack)) {
+    stack = new Stack(stack);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.register" id="apidoc.element.dustjs-linkedin.dust.register">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>register
+        <span class="apidocSignatureSpan">(name, tmpl)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">register = function (name, tmpl) {
+  if (!name) {
+    return;
+  }
+  tmpl.templateName = name;
+  if (dust.config.cache !== false) {
+    dust.cache[name] = tmpl;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.render" id="apidoc.element.dustjs-linkedin.dust.render">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>render
+        <span class="apidocSignatureSpan">(nameOrTemplate, context, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (nameOrTemplate, context, callback) {
+  var chunk = new Stub(callback).head;
+  try {
+    load(nameOrTemplate, chunk, context).end();
+  } catch (err) {
+    chunk.setError(err);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Context.prototype.resolve = function(body) {
+  var chunk;
+
+  if(typeof body !== &#x27;function&#x27;) {
+    return body;
+  }
+  chunk = new Chunk().<span class="apidocCodeKeywordSpan">render</span>(body, this);
+  if(chunk instanceof Chunk) {
+    return chunk.data.join(&#x27;&#x27;); // ie7 perf
+  }
+  return chunk;
+};
+
+Context.prototype.getTemplateName = function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.renderSource" id="apidoc.element.dustjs-linkedin.dust.renderSource">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>renderSource
+        <span class="apidocSignatureSpan">(source, context, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function renderSource(source, context, callback) {
+  var tmpl = dust.loadSource(dust.compile(source));
+  return loaderFor(tmpl)(context, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.dust.stream" id="apidoc.element.dustjs-linkedin.dust.stream">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.dust.</span>stream
+        <span class="apidocSignatureSpan">(nameOrTemplate, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stream = function (nameOrTemplate, context) {
+  var stream = new Stream(),
+      chunk = stream.head;
+  dust.nextTick(function() {
+    try {
+      load(nameOrTemplate, chunk, context).end();
+    } catch (err) {
+      chunk.setError(err);
+    }
+  });
+  return stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    } else {
+      return this.reference(elem, context, auto, filters);
+    }
+  }
+  if (dust.isThenable(elem)) {
+    return this.await(elem, context, null, auto, filters);
+  } else if (dust.isStreamable(elem)) {
+    return this.<span class="apidocCodeKeywordSpan">stream</span>(elem, context, null, auto, filters);
+  } else if (!dust.isEmpty(elem)) {
+    return this.write(dust.filter(elem, auto, filters, context));
+  } else {
+    return this;
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dustjs-linkedin.filters" id="apidoc.module.dustjs-linkedin.filters">module dustjs-linkedin.filters</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.filters.h" id="apidoc.element.dustjs-linkedin.filters.h">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.filters.</span>h
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">h = function (value) { return dust.escapeHtml(value); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.filters.j" id="apidoc.element.dustjs-linkedin.filters.j">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.filters.</span>j
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">j = function (value) { return dust.escapeJs(value); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.filters.jp" id="apidoc.element.dustjs-linkedin.filters.jp">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.filters.</span>jp
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jp = function (value) {
+  if (!JSON) {dust.log(&#x27;JSON is undefined; could not parse `&#x27; + value + &#x27;`&#x27;, WARN);
+    return value;
+  } else {
+    return JSON.parse(value);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.filters.js" id="apidoc.element.dustjs-linkedin.filters.js">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.filters.</span>js
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js = function (value) { return dust.escapeJSON(value); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.filters.u" id="apidoc.element.dustjs-linkedin.filters.u">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.filters.</span>u
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encodeURI() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.filters.uc" id="apidoc.element.dustjs-linkedin.filters.uc">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.filters.</span>uc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encodeURIComponent() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dustjs-linkedin.nodes" id="apidoc.module.dustjs-linkedin.nodes">module dustjs-linkedin.nodes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.bodies" id="apidoc.element.dustjs-linkedin.nodes.bodies">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>bodies
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bodies = function (context, node) {
+  var out = [];
+  for (var i=1, len=node.length; i&#x3c;len; i++) {
+    out.push(compiler.compileNode(context, node[i]));
+  }
+  return &#x27;{&#x27; + out.join(&#x27;,&#x27;) + &#x27;}&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.body" id="apidoc.element.dustjs-linkedin.nodes.body">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>body
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">body = function (context, node) {
+  var id = context.index++,
+      name = &#x27;body_&#x27; + id;
+  context.bodies[id] = compileParts(context, node);
+  return name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.buffer" id="apidoc.element.dustjs-linkedin.nodes.buffer">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>buffer
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buffer = function (context, node) {
+  return &#x27;.w(&#x27; + escape(node[1]) + &#x27;)&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.context" id="apidoc.element.dustjs-linkedin.nodes.context">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>context
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">context = function (context, node) {
+  if (node[1]) {
+    return &#x27;ctx.rebase(&#x27; + compiler.compileNode(context, node[1]) + &#x27;)&#x27;;
+  }
+  return &#x27;ctx&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.filters" id="apidoc.element.dustjs-linkedin.nodes.filters">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>filters
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filters = function (context, node) {
+  var list = [];
+  for (var i=1, len=node.length; i&#x3c;len; i++) {
+    var filter = node[i];
+    list.push(&#x27;&#x22;&#x27; + filter + &#x27;&#x22;&#x27;);
+  }
+  return &#x27;&#x22;&#x27; + context.auto + &#x27;&#x22;&#x27; +
+    (list.length ? &#x27;,[&#x27; + list.join(&#x27;,&#x27;) + &#x27;]&#x27; : &#x27;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.format" id="apidoc.element.dustjs-linkedin.nodes.format">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>format
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function (context, node) {
+  return &#x27;.w(&#x27; + escape(node[1]) + &#x27;)&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.key" id="apidoc.element.dustjs-linkedin.nodes.key">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>key
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">key = function (context, node) {
+  return &#x27;ctx.get([&#x22;&#x27; + node[1] + &#x27;&#x22;], false)&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.literal" id="apidoc.element.dustjs-linkedin.nodes.literal">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>literal
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">literal = function (context, node) {
+  return escape(node[1]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.param" id="apidoc.element.dustjs-linkedin.nodes.param">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>param
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">param = function (context, node) {
+  return compiler.compileNode(context, node[1]) + &#x27;:&#x27; + compiler.compileNode(context, node[2]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.params" id="apidoc.element.dustjs-linkedin.nodes.params">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>params
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">params = function (context, node) {
+  var out = [];
+  for (var i=1, len=node.length; i&#x3c;len; i++) {
+    out.push(compiler.compileNode(context, node[i]));
+  }
+  if (out.length) {
+    return &#x27;{&#x27; + out.join(&#x27;,&#x27;) + &#x27;}&#x27;;
+  }
+  return &#x27;{}&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.partial" id="apidoc.element.dustjs-linkedin.nodes.partial">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>partial
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">partial = function (context, node) {
+  return &#x27;.p(&#x27; +
+      compiler.compileNode(context, node[1]) +
+      &#x27;,ctx,&#x27; + compiler.compileNode(context, node[2]) +
+      &#x27;,&#x27; + compiler.compileNode(context, node[3]) + &#x27;)&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.path" id="apidoc.element.dustjs-linkedin.nodes.path">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>path
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">path = function (context, node) {
+  var current = node[1],
+      keys = node[2],
+      list = [];
+
+  for (var i=0,len=keys.length; i&#x3c;len; i++) {
+    if (isArray(keys[i])) {
+      list.push(compiler.compileNode(context, keys[i]));
+    } else {
+      list.push(&#x27;&#x22;&#x27; + keys[i] + &#x27;&#x22;&#x27;);
+    }
+  }
+  return &#x27;ctx.getPath(&#x27; + current + &#x27;, [&#x27; + list.join(&#x27;,&#x27;) + &#x27;])&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.raw" id="apidoc.element.dustjs-linkedin.nodes.raw">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>raw
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">raw = function (context, node) {
+  return &#x22;.w(&#x22; + escape(node[1]) + &#x22;)&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.nodes.reference" id="apidoc.element.dustjs-linkedin.nodes.reference">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.nodes.</span>reference
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reference = function (context, node) {
+  return &#x27;.f(&#x27; + compiler.compileNode(context, node[1]) +
+    &#x27;,ctx,&#x27; + compiler.compileNode(context, node[2]) + &#x27;)&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  Chunk.prototype.reference = function(elem, context, auto, filters) {
+if (typeof elem === &#x27;function&#x27;) {
+  elem = elem.apply(context.current(), [this, context, null, {auto: auto, filters: filters}]);
+  if (elem instanceof Chunk) {
+    return elem;
+  } else {
+    return this.<span class="apidocCodeKeywordSpan">reference</span>(elem, context, auto, filters);
+  }
+}
+if (dust.isThenable(elem)) {
+  return this.await(elem, context, null, auto, filters);
+} else if (dust.isStreamable(elem)) {
+  return this.stream(elem, context, null, auto, filters);
+} else if (!dust.isEmpty(elem)) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dustjs-linkedin.optimizers" id="apidoc.module.dustjs-linkedin.optimizers">module dustjs-linkedin.optimizers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.bodies" id="apidoc.element.dustjs-linkedin.optimizers.bodies">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>bodies
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visit(context, node) {
+  var out = [node[0]],
+      i, len, res;
+  for (i=1, len=node.length; i&#x3c;len; i++) {
+    res = compiler.filterNode(context, node[i]);
+    if (res) {
+      out.push(res);
+    }
+  }
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.body" id="apidoc.element.dustjs-linkedin.optimizers.body">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>body
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compactBuffers(context, node) {
+  var out = [node[0]],
+      memo, i, len, res;
+  for (i=1, len=node.length; i&#x3c;len; i++) {
+    res = compiler.filterNode(context, node[i]);
+    if (res) {
+      if (res[0] === &#x27;buffer&#x27; || res[0] === &#x27;format&#x27;) {
+        if (memo) {
+          memo[0] = (res[0] === &#x27;buffer&#x27;) ? &#x27;buffer&#x27; : memo[0];
+          memo[1] += res.slice(1, -2).join(&#x27;&#x27;);
+        } else {
+          memo = res;
+          out.push(res);
+        }
+      } else {
+        memo = null;
+        out.push(res);
+      }
+    }
+  }
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.buffer" id="apidoc.element.dustjs-linkedin.optimizers.buffer">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>buffer
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop(context, node) {
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.col" id="apidoc.element.dustjs-linkedin.optimizers.col">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>col
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nullify(){}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.comment" id="apidoc.element.dustjs-linkedin.optimizers.comment">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>comment
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nullify(){}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.context" id="apidoc.element.dustjs-linkedin.optimizers.context">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>context
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visit(context, node) {
+  var out = [node[0]],
+      i, len, res;
+  for (i=1, len=node.length; i&#x3c;len; i++) {
+    res = compiler.filterNode(context, node[i]);
+    if (res) {
+      out.push(res);
+    }
+  }
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.filters" id="apidoc.element.dustjs-linkedin.optimizers.filters">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>filters
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop(context, node) {
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.format" id="apidoc.element.dustjs-linkedin.optimizers.format">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>format
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function format(context, node) {
+  if(dust.config.whitespace) {
+    // Format nodes are in the form [&#x27;format&#x27;, eol, whitespace, line, col],
+    // which is unlike other nodes in that there are two pieces of content
+    // Join eol and whitespace together to normalize the node format
+    node.splice(1, 2, node.slice(1, -2).join(&#x27;&#x27;));
+    return node;
+  }
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.key" id="apidoc.element.dustjs-linkedin.optimizers.key">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>key
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop(context, node) {
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.line" id="apidoc.element.dustjs-linkedin.optimizers.line">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>line
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nullify(){}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.literal" id="apidoc.element.dustjs-linkedin.optimizers.literal">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>literal
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop(context, node) {
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.param" id="apidoc.element.dustjs-linkedin.optimizers.param">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>param
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visit(context, node) {
+  var out = [node[0]],
+      i, len, res;
+  for (i=1, len=node.length; i&#x3c;len; i++) {
+    res = compiler.filterNode(context, node[i]);
+    if (res) {
+      out.push(res);
+    }
+  }
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.params" id="apidoc.element.dustjs-linkedin.optimizers.params">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>params
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visit(context, node) {
+  var out = [node[0]],
+      i, len, res;
+  for (i=1, len=node.length; i&#x3c;len; i++) {
+    res = compiler.filterNode(context, node[i]);
+    if (res) {
+      out.push(res);
+    }
+  }
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.partial" id="apidoc.element.dustjs-linkedin.optimizers.partial">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>partial
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visit(context, node) {
+  var out = [node[0]],
+      i, len, res;
+  for (i=1, len=node.length; i&#x3c;len; i++) {
+    res = compiler.filterNode(context, node[i]);
+    if (res) {
+      out.push(res);
+    }
+  }
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.path" id="apidoc.element.dustjs-linkedin.optimizers.path">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>path
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop(context, node) {
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.raw" id="apidoc.element.dustjs-linkedin.optimizers.raw">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>raw
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop(context, node) {
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.reference" id="apidoc.element.dustjs-linkedin.optimizers.reference">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>reference
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function visit(context, node) {
+  var out = [node[0]],
+      i, len, res;
+  for (i=1, len=node.length; i&#x3c;len; i++) {
+    res = compiler.filterNode(context, node[i]);
+    if (res) {
+      out.push(res);
+    }
+  }
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  Chunk.prototype.reference = function(elem, context, auto, filters) {
+if (typeof elem === &#x27;function&#x27;) {
+  elem = elem.apply(context.current(), [this, context, null, {auto: auto, filters: filters}]);
+  if (elem instanceof Chunk) {
+    return elem;
+  } else {
+    return this.<span class="apidocCodeKeywordSpan">reference</span>(elem, context, auto, filters);
+  }
+}
+if (dust.isThenable(elem)) {
+  return this.await(elem, context, null, auto, filters);
+} else if (dust.isStreamable(elem)) {
+  return this.stream(elem, context, null, auto, filters);
+} else if (!dust.isEmpty(elem)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.optimizers.special" id="apidoc.element.dustjs-linkedin.optimizers.special">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.optimizers.</span>special
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convertSpecial(context, node) {
+  return [&#x27;buffer&#x27;, specialChars[node[1]], node[2], node[3]];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dustjs-linkedin.parser" id="apidoc.module.dustjs-linkedin.parser">module dustjs-linkedin.parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.parser.SyntaxError" id="apidoc.element.dustjs-linkedin.parser.SyntaxError">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.parser.</span>SyntaxError
+        <span class="apidocSignatureSpan">(message, expected, found, offset, line, column)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SyntaxError(message, expected, found, offset, line, column) {
+  this.message  = message;
+  this.expected = expected;
+  this.found    = found;
+  this.offset   = offset;
+  this.line     = line;
+  this.column   = column;
+
+  this.name     = &#x22;SyntaxError&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.parser.parse" id="apidoc.element.dustjs-linkedin.parser.parse">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.parser.</span>parse
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(input) {
+  var options = arguments.length &#x3e; 1 ? arguments[1] : {},
+
+      peg$FAILED = {},
+
+      peg$startRuleFunctions = { start: peg$parsestart },
+      peg$startRuleFunction  = peg$parsestart,
+
+      peg$c0 = [],
+      peg$c1 = function(p) {
+          var body = [&#x22;body&#x22;].concat(p);
+          return withPosition(body);
+        },
+      peg$c2 = { type: &#x22;other&#x22;, description: &#x22;section&#x22; },
+      peg$c3 = peg$FAILED,
+      peg$c4 = null,
+      peg$c5 = function(t, b, e, n) {
+          if( (!n) || (t[1].text !== n.text) ) {
+            error(&#x22;Expected end tag for &#x22;+t[1].text+&#x22; but it was not found.&#x22;);
+          }
+          return true;
+        },
+      peg$c6 = void 0,
+      peg$c7 = function(t, b, e, n) {
+          e.push([&#x22;param&#x22;, [&#x22;literal&#x22;, &#x22;block&#x22;], b]);
+          t.push(e, [&#x22;filters&#x22;]);
+          return withPosition(t)
+        },
+      peg$c8 = &#x22;/&#x22;,
+      peg$c9 = { type: &#x22;literal&#x22;, value: &#x22;/&#x22;, description: &#x22;\&#x22;/\&#x22;&#x22; },
+      peg$c10 = function(t) {
+          t.push([&#x22;bodies&#x22;], [&#x22;filters&#x22;]);
+          return withPosition(t)
+        },
+      peg$c11 = /^[#?\^&#x3c;+@%]/,
+      peg$c12 = { type: &#x22;class&#x22;, value: &#x22;[#?\\^&#x3c;+@%]&#x22;, description: &#x22;[#?\\^&#x3c;+@%]&#x22; },
+      peg$c13 = function(t, n, c, p) { return [t, n, c, p] },
+      peg$c14 = { type: &#x22;other&#x22;, description: &#x22;end tag&#x22; },
+      peg$c15 = function(n) { return n },
+      peg$c16 = &#x22;:&#x22;,
+      peg$c17 = { type: &#x22;literal&#x22;, value: &#x22;:&#x22;, description: &#x22;\&#x22;:\&#x22;&#x22; },
+      peg$c18 = function(n) {return n},
+      peg$c19 = function(n) { return n ? [&#x22;context&#x22;, n] : [&#x22;context&#x22;] },
+      peg$c20 = { type: &#x22;other&#x22;, description: &#x22;params&#x22; },
+      peg$c21 = &#x22;=&#x22;,
+      peg$c22 = { type: &#x22;literal&#x22;, value: &#x22;=&#x22;, description: &#x22;\&#x22;=\&#x22;&#x22; },
+      peg$c23 = function(k, v) {return [&#x22;param&#x22;, [&#x22;literal&#x22;, k], v]},
+      peg$c24 = function(p) { return [&#x22;params&#x22;].concat(p) },
+      peg$c25 = { type: &#x22;other&#x22;, description: &#x22;bodies&#x22; },
+      peg$c26 = function(p) { return [&#x22;bodies&#x22;].concat(p) },
+      peg$c27 = { type: &#x22;other&#x22;, description: &#x22;reference&#x22; },
+      peg$c28 = function(n, f) { return withPosition([&#x22;reference&#x22;, n, f]) },
+      peg$c29 = { type: &#x22;other&#x22;, description: &#x22;partial&#x22; },
+      peg$c30 = &#x22;&#x3e;&#x22;,
+      peg$c31 = { type: &#x22;literal&#x22;, value: &#x22;&#x3e;&#x22;, description: &#x22;\&#x22;&#x3e;\&#x22;&#x22; },
+      peg$c32 = &#x22;+&#x22;,
+      peg$c33 = { type: &#x22;literal&#x22;, value: &#x22;+&#x22;, description: &#x22;\&#x22;+\&#x22;&#x22; },
+      peg$c34 = function(k) {return [&#x22;literal&#x22;, k]},
+      peg$c35 = function(s, n, c, p) {
+          var key = (s === &#x22;&#x3e;&#x22;) ? &#x22;partial&#x22; : s;
+          return withPosition([key, n, c, p])
+        },
+      peg$c36 = { type: &#x22;other&#x22;, description: &#x22;filters&#x22; },
+      peg$c37 = &#x22;|&#x22;,
+      peg$c38 = { type: &#x22;literal&#x22;, value: &#x22;|&#x22;, description: &#x22;\&#x22;|\&#x22;&#x22; },
+      peg$c39 = function(f) { return [&#x22;filters&#x22;].concat(f) },
+      peg$c40 = { type: &#x22;other&#x22;, description: &#x22;special&#x22; },
+      peg$c41 = &#x22;~&#x22;,
+      peg$c42 = { type: &#x22;literal&#x22;, value: &#x22;~&#x22;, description: &#x22;\&#x22;~\&#x22;&#x22; },
+      peg$c43 = function(k) { return withPosition([&#x22;special&#x22;, k]) },
+      peg$c44 = { type: &#x22;other&#x22;, description: &#x22;identifier&#x22; },
+      peg$c45 = function(p) {
+          var arr = [&#x22;path&#x22;].concat(p);
+          arr.text = p[1].join(&#x27;.&#x27;).replace(/,line,\d+,col,\d+/g,&#x27;&#x27;);
+          return arr;
+        },
+      peg$c46 = function(k) {
+          var arr = [&#x22;key&#x22;, k];
+          arr.text = k;
+          return arr;
+        },
+      peg$c47 = { type: &#x22;other&#x22;, description: &#x22;number&#x22; },
+      peg$c48 = function(n) { return [&#x27;literal&#x27;, n]; },
+      peg$c49 = { type: &#x22;other&#x22;, description: &#x22;float&#x22; },
+      peg$c50 = &#x22;.&#x22;,
+      peg$c51 = { type: &#x22;literal&#x22;, value: &#x22;.&#x22;, description: &#x22;\&#x22;.\&#x22;&#x22; },
+      peg$c52 = function(l, r) { return parseFloat(l + &#x22;.&#x22; + r); },
+      peg$c53 = { type: &#x22;other&#x22;, description: &#x22;unsigned_integer&#x22; },
+      peg$c54 = /^[0-9]/,
+      peg$c55 = { type: &#x22;class&#x22;, value: &#x22;[0-9]&#x22;, description: &#x22;[0-9]&#x22; },
+      peg$c56 = function(digits) { return makeInteger(digits); },
+      peg$c57 = { type: &#x22;other&#x22;, description: &#x22;signed_integer&#x22; },
+      peg$c58 = &#x22;-&#x22;,
+      peg$c59 = { type: &#x22;literal&#x22;, value: &#x22;-&#x22;, description: &#x22;\&#x22;-\&#x22;&#x22; },
+      peg$c60 = function(sign, n) { return n * -1; }, ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  u: encodeURI,
+  uc: encodeURIComponent,
+  js: function(value) { return dust.escapeJSON(value); },
+  jp: function(value) {
+    if (!JSON) {dust.log(&#x27;JSON is undefined; could not parse `&#x27; + value + &#x27;`&#x27;, WARN);
+      return value;
+    } else {
+      return JSON.<span class="apidocCodeKeywordSpan">parse</span>(value);
+    }
+  }
+};
+
+function Context(stack, global, options, blocks, templateName) {
+  if(stack !== undefined &#x26;&#x26; !(stack instanceof Stack)) {
+    stack = new Stack(stack);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dustjs-linkedin.pragmas" id="apidoc.module.dustjs-linkedin.pragmas">module dustjs-linkedin.pragmas</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dustjs-linkedin.pragmas.esc" id="apidoc.element.dustjs-linkedin.pragmas.esc">
+        function <span class="apidocSignatureSpan">dustjs-linkedin.pragmas.</span>esc
+        <span class="apidocSignatureSpan">(compiler, context, bodies)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">esc = function (compiler, context, bodies) {
+  var old = compiler.auto,
+      out;
+  if (!context) {
+    context = &#x27;h&#x27;;
+  }
+  compiler.auto = (context === &#x27;s&#x27;) ? &#x27;&#x27; : context;
+  out = compileParts(compiler, bodies.block);
+  compiler.auto = old;
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
